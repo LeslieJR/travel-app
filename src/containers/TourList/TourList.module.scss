@@ -4,3 +4,23 @@
     padding: 2rem;
     
 }
+@media screen and (min-width:  768px){
+    .TourList{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width:  992px){
+    .TourList{
+        width: 85vw;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1140 px){
+    .TourList{      
+        grid-template-columns: repeat(4, 1fr) ;
+    }
+}
