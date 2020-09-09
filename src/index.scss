@@ -1,0 +1,17 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+$mainBlack: #222;
+$mainBlue: #407bc8;
+$mainWhite: #fff;
+$mainGrey: #ececec;
+
+body{
+    background-color: $mainWhite;
+    color: $mainBlack;
+    font-family: 'Quicksand', sans-serif;
+}
