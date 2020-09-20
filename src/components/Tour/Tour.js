@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
 import classes from './Tour.module.scss'
 export default class Tour extends Component {
-    constructor(props){
-        super(props);
-        this.state={
+   state={
             showInfo: false
         }
-        this.handleInfo=this.handleInfo.bind(this);
-    }
+     
 
-    handleInfo(){
+    handleInfo = () => {
         this.setState(prevState => {
             return {
                 showInfo: !prevState.showInfo
@@ -17,15 +14,13 @@ export default class Tour extends Component {
         })
     }
     render() {
-        const {id, city, img, name, info} = this.props.tour;
+        //console.log(this.props.tour)
+        const {id, name, snippet, images} = this.props.tour;
         
         return (
             <article className={classes.Tour}>
                <div className={classes.ImgContainer}>
-                <img 
-                alt="cities"
-                src={img}
-                />
+                   <img src={images[0].sizes.medium.url} alt={name}/>
                 <span 
                 className={classes.CloseBtn} 
                 onClick={() => {this.props.remove(id)}}
@@ -33,13 +28,13 @@ export default class Tour extends Component {
                     <i className="fas fa-window-close"/>
                 </span>
                 <div className={classes.TourInfo}>
-                    <h3>{city}</h3>
+                    
                     <h4>{name}</h4>
                     <h5>info{" "}
                       <span onClick={this.handleInfo}>
                           <i className="fas fa-caret-square-down"/>
                       </span></h5>
-                    {this.state.showInfo ? <p>{info}</p> : null }
+                    {this.state.showInfo ? <p>{snippet}</p> : null }
                    
                 </div>
                </div> 

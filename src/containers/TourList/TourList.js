@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 import Tour from '../../components/Tour/Tour';
+import Form from '../../components/Form/Form';
 import classes from './TourList.module.scss'
-import {tourData} from '../../components/tourData'
+
 class TourList extends Component{
-    constructor(props){
-        super(props);
-        this.state={
-            loading:false,
-            error: null,
-            tours:tourData
-        }
-        this.removeTour=this.removeTour.bind(this)
-        
+    
+    state={
+        loading:false,            
+        error: null,
+        tours:[]   
     }
 
-    removeTour(id){
+    citiesFetched = (citiesData) => {
+        console.log('TourList', citiesData);
+        this.setState({
+          tours:  citiesData
+        })
+      }
+
+    removeTour=(id)=>{
         console.log(id);
         const {tours} = this.state;
         const sortedTours = tours.filter(tour => tour.id !== id);
@@ -26,7 +30,10 @@ class TourList extends Component{
         console.log(this.state.tours)
         const {tours} = this.state;
         return(
+            <div>
+             <Form onSubmit={this.citiesFetched}/>
             <div className={classes.TourList}>
+                
                 {
                 tours.map(tour=>{
                     return(
@@ -39,7 +46,9 @@ class TourList extends Component{
                     })
                 }
 
+            </div>   
             </div>
+            
         )
     }
 }

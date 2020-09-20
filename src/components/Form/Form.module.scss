@@ -1,0 +1,19 @@
+form {
+	border: thin solid #ddd;
+  background-color: #fbfbfb;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+form input{
+    padding: 5px 10px;
+    font-size: medium;
+}
+
+form button {
+    font-family: inherit;
+    font-weight: bold;
+    padding: 5px 10px;
+}
