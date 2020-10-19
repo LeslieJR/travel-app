@@ -6,20 +6,18 @@ import classes from './TourList.module.scss'
 class TourList extends Component{
     
     state={
-        loading:false,            
-        error: null,
         tours:[]   
     }
 
     citiesFetched = (citiesData) => {
-        console.log('TourList', citiesData);
+        //console.log('TourList', citiesData);
         this.setState({
-          tours:  citiesData
+            tours:  citiesData
         })
       }
 
     removeTour=(id)=>{
-        console.log(id);
+        //console.log(id);
         const {tours} = this.state;
         const sortedTours = tours.filter(tour => tour.id !== id);
         this.setState({
@@ -27,13 +25,12 @@ class TourList extends Component{
         })
     }
     render(){
-        console.log(this.state.tours)
+        //console.log(this.state.tours)
         const {tours} = this.state;
         return(
             <div>
-             <Form onSubmit={this.citiesFetched}/>
-            <div className={classes.TourList}>
-                
+                <Form onSubmit={this.citiesFetched}/>
+                <div className={classes.TourList}>
                 {
                 tours.map(tour=>{
                     return(
@@ -45,8 +42,7 @@ class TourList extends Component{
                         )
                     })
                 }
-
-            </div>   
+                </div>   
             </div>
             
         )

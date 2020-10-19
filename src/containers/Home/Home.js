@@ -1,20 +1,12 @@
-import React, { Component } from 'react';
-class Home extends Component{
-    constructor(props){
-        super(props);
-        this.state={
-            loading:false,
-            error: null
-        }
-    }
+import React from 'react';
 
-    render(){
-        return(
-            <div>
-                <h1>Home</h1>
-            </div>
+function Home() {
+    return(
+        <div>
+            <h1>Home</h1>        
+        </div>
         )
-    }
+    
 }
 
 export default Home;

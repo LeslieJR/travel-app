@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import classes from './Tour.module.scss'
 export default class Tour extends Component {
    state={
-            showInfo: false
+        showInfo: false
         }
      
 
     handleInfo = () => {
         this.setState(prevState => {
             return {
-                showInfo: !prevState.showInfo
+                showInfo: !prevState.showInfo,
             }
         })
     }
@@ -30,11 +30,7 @@ export default class Tour extends Component {
                 <div className={classes.TourInfo}>
                     
                     <h4>{name}</h4>
-                    <h5>info{" "}
-                      <span onClick={this.handleInfo}>
-                          <i className="fas fa-caret-square-down"/>
-                      </span></h5>
-                    {this.state.showInfo ? <p>{snippet}</p> : null }
+                    <p>{snippet}</p>
                    
                 </div>
                </div> 
