@@ -33,14 +33,13 @@
         height: 100%;
         padding: 16px 10px;
         border-bottom: 4px solid transparent;
-        font-weight: 600;
         font-size: large;
     }
     
     .NavigationItem a:hover,
     .NavigationItem a:active,
     .NavigationItem a.active {
-        border-bottom: 4px solid #407bc8;
+        border-bottom: 4px solid #e9da58;
         color: white;
     }
 }

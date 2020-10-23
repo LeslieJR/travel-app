@@ -1,27 +1,39 @@
-.Toolbar {
+.Header {
     
     height: 56px;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgb(151 206 211);
+    background-color: rgb(69, 157, 114);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
     z-index: 90;
+    &__icon{
+        margin-right: 0.7rem;
+    }
+
+    nav {
+    height: 100%;
+    position: absolute;}
+
+    a{
+        &:link,
+        &:visited{
+        color: white;
+    }
+    }
 }
 
-.Toolbar nav {
-    height: 100%;
-    position: absolute;
-}
+
+
 
 
 @media (max-width: 499px){
-    .DesktopOnly{
+    .Header nav{
         display: none;
     }
 }

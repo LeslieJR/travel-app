@@ -28,7 +28,7 @@ class TourList extends Component{
         //console.log(this.state.tours)
         const {tours} = this.state;
         return(
-            <div>
+            <div className={classes.Tour}>
                 <Form onSubmit={this.citiesFetched}/>
                 <div className={classes.TourList}>
                 {
