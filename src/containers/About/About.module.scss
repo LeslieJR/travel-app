@@ -1,2 +1,53 @@
+.About{
+    display: flex;
+    flex-direction: column; 
+    margin-top: 55px;
 
+    h1{
+        align-self: center;
+        text-transform: uppercase;
+    }
+    &__main{
+    display: flex;
+    margin: 10px auto 25px auto;
+    
+    >div{
+    flex:1;
+    padding: 10px 15px;
+    
+    }
+    }
+    &__image{
+        width: 100%;
+    }
 
+    &__paragraphs{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    &__features{
+        display: flex;
+        margin: 0 20px;
+        div{
+            flex:1;
+            padding: 25px;
+            border: 1px solid grey;
+            border-radius: 12px;
+            text-align: center;
+            background-color: rgba(211, 223, 221, 0.8);
+            box-shadow: 0 1.5rem 4rem rgba(black, .15);
+            transition: transform .3s;
+            &:hover {
+            transform: translateY(-1.5rem) scale(1.03);
+            
+        }
+        }
+        div:not(:last-child){
+            margin-right: 2rem;
+        }
+        
+        
+}
+}
