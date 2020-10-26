@@ -1,3 +1,4 @@
+@import '../../index.scss';
 .Banner{
     min-height: 100vh;
     display: flex;
@@ -13,7 +14,7 @@
     text-transform: uppercase;
     text-align: center;
     font-size: 4.5rem;
-    color: #fff;
+    color: $mainWhite;
     padding: 0 2rem;
     /*margin-bottom: 2rem;*/
     letter-spacing: 0.4rem;
@@ -24,7 +25,7 @@
     line-height: 2;
     font-weight: 400;
     font-size: 1.4rem;
-    color: #fff;
+    color:$mainWhite;
   }
 }
 
@@ -32,7 +33,7 @@
 .Btn{
     background: linear-gradient(to right, #3c8c3c, #e9da58ab);
     font-family: inherit;
-    color: white;
+    color:$mainWhite;
     //animation: moveInFromBottom 0.5s ease-out 0.75s;
         /*important*/
     //animation-fill-mode: backwards;
@@ -53,12 +54,12 @@
  
     &:hover{
        transform: translateY(-3px);
-       box-shadow: 0 1rem 2rem rgba(black,0.2); 
+       box-shadow: 0 1rem 2rem rgba($mainBlack,0.2); 
 
        &::after{
         transform: scaleX(1.4) scaleY(1.6);
         opacity: 0;
-        background-color: white;
+        background-color: $mainWhite;
     }
     }
 
@@ -66,7 +67,7 @@
     &:focus{
         outline: none;
         transform: translateX(-1px);
-        box-shadow: 0 .5rem 1rem rgba(black,0.2);
+        box-shadow: 0 .5rem 1rem rgba($mainBlack,0.2);
     }
 
 

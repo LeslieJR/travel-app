@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Tour from '../../components/Tour/Tour';
 import Form from '../../components/Form/Form';
-import classes from './TourList.module.scss'
+import classes from './TourList.module.scss';
 
 class TourList extends Component{
     
@@ -16,6 +16,8 @@ class TourList extends Component{
         })
       }
 
+    
+
     removeTour=(id)=>{
         //console.log(id);
         const {tours} = this.state;
@@ -27,7 +29,9 @@ class TourList extends Component{
     render(){
         //console.log(this.state.tours)
         const {tours} = this.state;
+        if(tours.length>0){
         return(
+
             <div className={classes.Tour}>
                 <Form onSubmit={this.citiesFetched}/>
                 <div className={classes.TourList}>
@@ -45,7 +49,14 @@ class TourList extends Component{
                 </div>   
             </div>
             
-        )
+        )}
+        else{
+            return(
+            <div className={classes.Tour}>
+                <Form onSubmit={this.citiesFetched}/>
+                <h1>Nothing fetched yet</h1>
+            </div>)
+        }
     }
 }
 

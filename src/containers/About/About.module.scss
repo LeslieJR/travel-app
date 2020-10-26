@@ -1,3 +1,4 @@
+@import '../../index.scss';
 .About{
     display: flex;
     flex-direction: column; 
@@ -33,7 +34,7 @@
         div{
             flex:1;
             padding: 25px;
-            border: 1px solid grey;
+            border: 1px solid $mainGrey;
             border-radius: 12px;
             text-align: center;
             background-color: rgba(211, 223, 221, 0.8);

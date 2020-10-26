@@ -7,6 +7,10 @@ class Form extends Component {
     state = {
         country: ''
     }
+
+    randomResults = () => {
+        
+    }
     handleSubmit = (e) => {
         e.preventDefault();
         fetch(`https://www.triposo.com/api/20190906/location.json?part_of=${this.state.country}&tag_labels=city&count=10&order_by=-score`, {
@@ -15,7 +19,7 @@ class Form extends Component {
                     'X-Triposo-Token': 'xkf5ronrbbpj772o4kq70ac3dye4rnb1'
                 }
             })
-            .then(response => response.json())
+            .then(response =>response.json())
             .then(data => {
                 this.props.onSubmit(data.results)
             })
