@@ -15,14 +15,13 @@ export default class Tour extends Component {
     }
     render() {
         //console.log(this.props.tour)
-        const {id, name, snippet, images} = this.props.tour;
+        const {id, name,score, snippet, images} = this.props.tour;
         
         return (
             <article className={classes.Tour}>
                <div className={classes.Container}>
                    <div className={classes.Container__img} style={{
                        backgroundImage: `url(${images[0].sizes.medium.url})`}}>
-                      
                    </div>
                    
                    <span 
@@ -31,7 +30,10 @@ export default class Tour extends Component {
                        <i className="fas fa-window-close"/>
                    </span>
                    <div className={classes.Container__info}> 
-                       <h4>{name}</h4>
+                       <div>
+                           <div>{name}</div>
+                           <div>{score.toFixed(1)}</div>
+                        </div>
                        <p>{snippet}</p> 
                    </div>
                </div> 

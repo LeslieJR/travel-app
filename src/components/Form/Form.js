@@ -29,23 +29,18 @@ class Form extends Component {
     render() {
 
         return ( 
-            <form onSubmit = {
-                this.handleSubmit
-            } >
-            <input value = {
-                this.state.country
-            }
-            onChange = {
-                e => this.setState({
-                    country: e.target.value
-                })
-            }
-            type = "text"
-            placeholder = "Search a country"
-            required 
-            style={{textTransform:"capitalize"}}/>
-            <button > Search </button> 
+            <form onSubmit = {this.handleSubmit} >
+                <input value = {this.state.country}
+                       onChange = {e => this.setState({country: e.target.value})}
+                       type = "text"
+                       placeholder = "Search a country"
+                       required 
+                       style={{textTransform:"capitalize"}}/>
+                <button > Search </button> 
             </form>
+
+            
+           
 
         )
     }

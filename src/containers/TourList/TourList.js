@@ -57,6 +57,7 @@ class TourList extends Component{
                         <Tour 
                         key={tour.id} 
                         tour={tour} 
+                        score={tour.score}
                         remove={this.removeTour}
                         />
                         )
