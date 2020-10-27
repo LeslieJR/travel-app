@@ -8,9 +8,6 @@ class Form extends Component {
         country: ''
     }
 
-    randomResults = () => {
-        
-    }
     handleSubmit = (e) => {
         e.preventDefault();
         fetch(`https://www.triposo.com/api/20190906/location.json?part_of=${this.state.country}&tag_labels=city&count=10&order_by=-score`, {
@@ -45,7 +42,8 @@ class Form extends Component {
             }
             type = "text"
             placeholder = "Search a country"
-            required />
+            required 
+            style={{textTransform:"capitalize"}}/>
             <button > Search </button> 
             </form>
 
