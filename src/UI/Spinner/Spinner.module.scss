@@ -1,11 +1,14 @@
+@import '../../index.scss';
+
 .Loader {
-    color: #64b6de;
-    font-size: 20px;
-    margin: 100px auto;
+    color: $mainYellow;
+    font-size: 1.3rem;
+    
+    margin: 80px auto;
     width: 1em;
     height: 1em;
     border-radius: 50%;
-    position: relative;
+    //position: relative;
     text-indent: -9999em;
     -webkit-animation: load4 1.3s infinite linear;
     animation: load4 1.3s infinite linear;

@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import Tour from '../../components/Tour/Tour';
 import Form from '../../components/Form/Form';
 import classes from './TourList.module.scss';
+import Spinner from '../../UI/Spinner/Spinner';
 
 class TourList extends Component{
     
     state={
+        fetching:true,
         country:"",
         tours:[]   
     }
@@ -20,14 +22,17 @@ class TourList extends Component{
             .then(response =>response.json())
             .then(data => {
                 this.setState({
+                    fetching: false,
                     tours: data.results
                 })
             })
+            .catch(error=>console.log(error))
     }
 
     citiesFetched = (citiesData) => {
         //console.log('TourList', citiesData);
         this.setState({
+            fetching: false,
             tours:  citiesData
         })
       }
@@ -50,9 +55,10 @@ class TourList extends Component{
 
             <div className={classes.Tour}>
                 <Form onSubmit={this.citiesFetched}/>
+               { this.state.fetching ? <Spinner/> :
                 <div className={classes.TourList}>
                 {
-                tours.map(tour=>{
+                 tours.map(tour=>{
                     return(
                         <Tour 
                         key={tour.id} 
@@ -63,7 +69,7 @@ class TourList extends Component{
                         )
                     })
                 }
-                </div>   
+                </div>}   
             </div>
             
         )

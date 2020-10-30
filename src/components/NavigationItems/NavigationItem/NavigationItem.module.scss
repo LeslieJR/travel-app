@@ -7,7 +7,7 @@
 }
 
 .NavigationItem a {
-    color: #2c8f6e;
+    color: $mainGreen;
     text-decoration: none;
     width: 100%;
     box-sizing: border-box;
@@ -40,7 +40,7 @@
     .NavigationItem a:hover,
     .NavigationItem a:active,
     .NavigationItem a.active {
-        border-bottom: 4px solid #e9da58;
+        border-bottom: 4px solid $mainYellow;
         color: $mainWhite;
     }
 }

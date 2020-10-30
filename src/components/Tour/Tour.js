@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import classes from './Tour.module.scss'
 export default class Tour extends Component {
-   state={
+   /*state={
         showInfo: false
         }
      
@@ -12,7 +12,7 @@ export default class Tour extends Component {
                 showInfo: !prevState.showInfo,
             }
         })
-    }
+    }*/
     render() {
         //console.log(this.props.tour)
         const {id, name,score, snippet, images} = this.props.tour;

@@ -13,11 +13,11 @@
  h1{
     text-transform: uppercase;
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     color: $mainWhite;
-    padding: 0 2rem;
+    padding: 0 1rem;
     /*margin-bottom: 2rem;*/
-    letter-spacing: 0.4rem;
+    
  }
  p{
     margin: 0 auto;
@@ -31,7 +31,7 @@
 
 
 .Btn{
-    background: linear-gradient(to right, #3c8c3c, #e9da58ab);
+    background: linear-gradient(to right, $mainGreen,$mainYellow);
     font-family: inherit;
     color:$mainWhite;
     //animation: moveInFromBottom 0.5s ease-out 0.75s;
@@ -85,4 +85,30 @@
     }
 
 
+}
+
+@media screen and (min-width:  $bp-small){
+    .Title{
+        h1{
+            font-size: 3rem;
+        }
+    }
+}
+@media screen and (min-width:  $bp-medium){
+    .Title{
+        h1{
+            font-size: 3.5rem;
+            letter-spacing: 0.4rem;
+            padding: 0 2rem;
+        }
+    }
+}
+@media screen and (min-width:  $bp-large){
+    .Title{
+        h1{
+            font-size: 4.5rem;
+            letter-spacing: 0.4rem;
+            padding: 0 2rem;
+        }
+    }
 }

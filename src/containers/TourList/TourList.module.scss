@@ -6,9 +6,14 @@
     width: 70vw;
     margin: 0 auto;
     padding: 2rem;
-    
 }
-@media screen and (min-width:  768px){
+.Spinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width:  $bp-small){
     .TourList{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -16,14 +21,14 @@
     }
 }
 
-@media screen and (min-width:  992px){
+@media screen and (min-width:  $bp-medium){
     .TourList{
         width: 85vw;
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media screen and (min-width: 1140 px){
+@media screen and (min-width: $bp-large){
     .TourList{      
         grid-template-columns: repeat(4, 1fr) ;
     }
